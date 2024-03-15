@@ -1,0 +1,60 @@
+{
+    "categorias": [
+      { "id": 1, "nombre": "Lentes de Sol" },
+      { "id": 2, "nombre": "Lentes de Lectura" },
+      { "id": 3, "nombre": "Lentes Deportivos" }
+    ],
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Lentes de Sol RayBan",
+        "descripcion": "Lentes de sol con montura metálica y lentes polarizadas.",
+        "precio": 50.000,
+        "stock": 100,
+        "imagen": "https://example.com/lentes-aviador.jpg",
+        "isOnDiscount": true,
+        "categoria": 1
+      },
+      {
+        "id": 2,
+        "nombre": "Lentes de Lectura Retro",
+        "descripcion": "Lentes de lectura con diseño retro y montura de pasta.",
+        "precio": 25.00,
+        "stock": 75,
+        "imagen": "https://example.com/lentes-lectura-retro.jpg",
+        "isOnDiscount": true,
+        "categoria": 2
+      },
+      {
+        "id": 3,
+        "nombre": "Lentes Deportivos Polarizados",
+        "descripcion": "Lentes deportivos con lentes polarizados ideales para actividades al aire libre.",
+        "precio": 35.000,
+        "stock": 120,
+        "imagen": "https://example.com/lentes-deportivos.jpg",
+        "isOnDiscount": true,
+        "categoria": 3
+      },
+      {
+        "id": 4,
+        "nombre": "Lentes de Sol Wayfarer",
+        "descripcion": "Lentes de sol estilo wayfarer con montura de acetato y lentes degradadas.",
+        "precio": 40.000,
+        "stock": 200,
+        "imagen": "https://example.com/lentes-wayfarer.jpg",
+        "isOnDiscount": false,
+        "categoria": 1
+      },
+      {
+        "id": 5,
+        "nombre": "Lentes de Lectura Modernos",
+        "descripcion": "Lentes de lectura modernos con montura metálica y diseño minimalista.",
+        "precio": 30.000,
+        "stock": 50,
+        "imagen": "https://example.com/lentes-lectura-modernos.jpg",
+        "isOnDiscount": true,
+        "categoria": 2
+      }
+    ]
+  }
+  

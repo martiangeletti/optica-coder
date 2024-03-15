@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CartWidget from "./CartWidget";
+import logo from "../img/logo-optica.jpg"
 
 const Navbar = () => {
     const [showCategories, setShowCategories] = useState(false);
@@ -7,10 +8,10 @@ const Navbar = () => {
     return (<nav className="bg-pink-300 py-4">
         <div className="container mx-auto flex justify-between items-center">            
             <div className="mr-20">
-                <img src="" alt="" />
+                <h1 className="text-xl ml-2 font-bold">Enigma Optica</h1>
             </div>
             <div className="flex items-center justify-center flex-grow">
-                <img src="../img/logo.png" alt="logo" />
+                <a href="index.html"><img src={logo} alt="logo-optica" className="h-12 md:h-16 lg:h-20 mr-6" /></a>
                 <form className="bg-white p-2 h-[30%] w-full rounded-lg">
                     <input type="text" />
                 </form>
@@ -23,17 +24,17 @@ const Navbar = () => {
                             <ul className="absolute bg-white text-xl w-[15%]">
                                 <li>
                                     <button className="hover:underline">
-                                        Dulce
+                                        Lentes 1
                                     </button>
                                 </li>
                                 <li>
                                     <button className="hover:underline">
-                                        Salado
+                                        Lentes 2
                                     </button>
                                 </li>
                                 <li>
                                     <button className="hover:underline">
-                                        Panes
+                                        Lentes 3
                                     </button>
                                 </li>
                             </ul>)}
