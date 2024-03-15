@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CartWidget from "./CartWidget";
 import logo from "../img/logo-optica.jpg"
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     const [showCategories, setShowCategories] = useState(false);
@@ -19,22 +20,27 @@ const Navbar = () => {
             <div className="ml-20 flex items-center justify-end">
                 <ul className="flex space-x-4 justify-end">
                     <li>
+                        <button className="text-white hover:underline text-xl">
+                            <Link to="/">Inicio</Link>
+                        </button>
+                    </li>
+                    <li>
                         <button className="text-white hover:underline text-xl" href="" onClick={() => setShowCategories(!showCategories)}>Categorias</button>
                         {showCategories && (
                             <ul className="absolute bg-white text-xl w-[15%]">
                                 <li>
                                     <button className="hover:underline">
-                                        Lentes 1
+                                        <Link to="/category/1">Lentes de sol</Link>
                                     </button>
                                 </li>
                                 <li>
                                     <button className="hover:underline">
-                                        Lentes 2
+                                        <Link to="/category/2">Lentes de lectura</Link>
                                     </button>
                                 </li>
                                 <li>
                                     <button className="hover:underline">
-                                        Lentes 3
+                                        <Link to="/category/3">Lentes deportivos</Link>
                                     </button>
                                 </li>
                             </ul>)}

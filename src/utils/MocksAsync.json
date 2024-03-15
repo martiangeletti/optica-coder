@@ -19,7 +19,7 @@
         "id": 2,
         "nombre": "Lentes de Lectura Retro",
         "descripcion": "Lentes de lectura con diseño retro y montura de pasta.",
-        "precio": 25.00,
+        "precio": 25.000,
         "stock": 75,
         "imagen": "https://example.com/lentes-lectura-retro.jpg",
         "isOnDiscount": true,
