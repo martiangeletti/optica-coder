@@ -8,7 +8,7 @@ const Navbar = () => {
 
     return (<nav className="bg-pink-300 py-4">
         <div className="container mx-auto flex justify-between items-center">            
-            <div className="mr-20">
+            <div className="mr-6 ml-6">
                 <h1 className="text-xl ml-2 font-bold">Enigma Optica</h1>
             </div>
             <div className="flex items-center justify-center flex-grow">
