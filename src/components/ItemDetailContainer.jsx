@@ -1,37 +1,41 @@
-import { useEffect, useState } from "react";
-import products from '../utils/MocksAsync.json';
+import { memo, useEffect, useState } from "react";
+import productos from '../utils/MocksAsync.json';
 import { ItemDetail } from "./ItemDetail";
 import { fakeApiCall } from "../utils/fakeApiCall";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-  const [productsCharged, setProductsCharged] = useState({})
-  const [loading, setLoading] = useState(true)
-
-
+  const { id } = useParams();
+  const [product, setProduct] = useState(null);
+  const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true)
-    fakeApiCall(products).then(resp => { setProductsCharged(resp); setLoading(false) })
+    setLoading(true);
 
-
-  }, [])
-
-  if (loading) return <h1> Loading... </h1>
-
-
-  return (<>
-    <div>
-      {
-        productsCharged.productos.length > 0 && productsCharged.productos.map((item, index) => {
-          return <ItemDetail item={item} />
-        }
-
-        )
+    fakeApiCall(productos).then(res => {
+      if (id) {
+        const item = res.productos.find(item => item.id === parseInt(id));
+        setProduct(item)
+      } else {
+        setProducts(res.productos)
       }
+      setLoading(false)
+
+    })
+
+  }, [id]);
+
+
+  if (loading) return <h1 className={`text-black ${loading ? "text-2xl mx-auto" : ""}`}>Cargando...</h1>;
+
+  return (
+    <div>
+      {product && <ItemDetail item={product} />}
+      {products && products.map((item, index) => <ItemDetail key={index} item={item} />)}
     </div>
+  );
+};
 
-
-  </>);
-}
 
 export default ItemDetailContainer;

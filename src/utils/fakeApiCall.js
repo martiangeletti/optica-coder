@@ -3,6 +3,6 @@ export const fakeApiCall = (mock) => {
       setTimeout(() => {
         resolve(mock)
       }
-        , 500)
+        , 2000)
     })
   }
