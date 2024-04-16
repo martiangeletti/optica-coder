@@ -6,6 +6,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ItemDetailContainer from './components/ItemDetailContainer'
 import { CartContext, CartProvider } from './context/CartContext';
+import CartPage  from './components/CartPage';
+import Checkout from './components/Checkout';
 
 
 
@@ -18,8 +20,8 @@ function App() {
         <Router>
           <Navbar />
           <ToastContainer
-            position="top-right"
-            autoClose={5000}
+            position="bottom-right"
+            autoClose={3000}
             hideProgressBar={false}
             newestOnTop={false}
             closeOnClick
@@ -32,9 +34,11 @@ function App() {
           />
           <Routes>
             <Route path="/category/:id" element={<ItemListContainer />} />
+            <Route path="/cart" element={<CartPage />} />
             <Route path='/items' element={<ItemDetailContainer />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/" exact element={<ItemListContainer />} />
+            <Route path="/checkout" element={<Checkout />}/>
           </Routes>
         </Router>
       </CartProvider>

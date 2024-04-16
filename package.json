@@ -11,6 +11,7 @@
     "watch": "npx tailwindcss -i ./src/index.css -o .src/output.css --watch "
   },
   "dependencies": {
+    "firebase": "^10.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",

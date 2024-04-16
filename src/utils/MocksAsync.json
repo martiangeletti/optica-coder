@@ -1,55 +1,48 @@
-{
-    "categorias": [
-      { "id": 1, "nombre": "Lentes de Sol" },
-      { "id": 2, "nombre": "Lentes de Lectura" },
-      { "id": 3, "nombre": "Lentes Deportivos" }
-    ],
-    "productos": [
-      {
-        "id": 1,
-        "nombre": "Lentes de Sol aviador",
-        "descripcion": "Lentes de sol con montura metálica y lentes polarizadas.",
-        "precio": 50000,
-        "stock": 100,
-        "imagen": "https://www.ray-ban.com/latam/gafas-de-sol/RB3025%20UNISEX%20aviator%20classic-dorado/8056597259811",
-        "categoria": 1
-      },
-      {
-        "id": 2,
-        "nombre": "Lentes de Lectura Retro",
-        "descripcion": "Lentes de lectura con diseño retro y montura de pasta.",
-        "precio": 25000,
-        "stock": 75,
-        "imagen": "https://www.ray-ban.com/latam/gafas-de-sol/RB4098%20FEMALE%20jackie%20ohh%20ii-havana%20claro/805289162315",
-        "categoria": 2
-      },
-      {
-        "id": 3,
-        "nombre": "Lentes Deportivos Polarizados",
-        "descripcion": "Lentes deportivos con lentes polarizados ideales para actividades al aire libre.",
-        "precio": 35000,
-        "stock": 120,
-        "imagen": "https://www.ray-ban.com/latam/gafas-de-sol/RB4177%20MALE%20rb4177-negro/713132425336",
-        "categoria": 3
-      },
-      {
-        "id": 4,
-        "nombre": "Lentes de Sol Wayfarer",
-        "descripcion": "Lentes de sol estilo wayfarer con montura de acetato y lentes degradadas.",
-        "precio": 40000,
-        "stock": 200,
-        "imagen": "https://www.ray-ban.com/latam/gafas-de-sol/RB4195%20UNISEX%20wayfarer%20liteforce-negro/8053672067118",
-        "categoria": 1
-      },
-      {
-        "id": 5,
-        "nombre": "Lentes de Lectura Modernos",
-        "descripcion": "Lentes de lectura modernos con montura metálica y diseño minimalista.",
-        "precio": 30000,
-        "stock": 50,
-        "imagen": "https://www.ray-ban.com/latam/gafas-de-visi%C3%B3n/RX1972V%20UNISEX%20rb1972v%20octagon-blanco/8056597367462",
-        "categoria": 2
-      }
-    ]
-  }
+[
+  {
+    "id": 1,
+    "nombre": "Lentes de Sol aviador",
+    "descripcion": "Lentes de sol con montura metálica y lentes polarizadas.",
+    "precio": 50000,
+    "stock": 100,
+    "imagen": "https://acdn.mitiendanube.com/stores/304/917/products/0rb3025__001_58_030a1-16dd3899486db8108115594191994479-640-0.jpg",
+    "categoria": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Lentes de Lectura Retro",
+      "descripcion": "Lentes de lectura con diseño retro y montura de pasta.",
+      "precio": 25000,
+      "stock": 75,
+      "imagen": "https://acdn.mitiendanube.com/stores/304/917/products/diseno-sin-titulo-2021-08-04t114027-4231-36b8cd4e55aa4514b116280882442968-640-0.jpg",
+      "categoria": 2
+    },
+    {
+      "id": 3,
+      "nombre": "Lentes Deportivos Polarizados",
+      "descripcion": "Lentes deportivos con lentes polarizados ideales para actividades al aire libre.",
+      "precio": 35000,
+      "stock": 120,
+      "imagen": "https://acdn.mitiendanube.com/stores/304/917/products/0rb2027__601_w1_330a1-f09a6b8fb87760b0d415599362336829-640-0.jpg",
+      "categoria": 3
+    },
+    {
+      "id": 4,
+      "nombre": "Lentes de Sol Wayfarer",
+      "descripcion": "Lentes de sol estilo wayfarer con montura de acetato y lentes degradadas.",
+      "precio": 40000,
+      "stock": 200,
+      "imagen": "https://d2eebw31vcx88p.cloudfront.net/mc-optica/uploads/8f902c660391062d35b33c19df76f85d227b2ca3.jpg",
+      "categoria": 1
+    },
+    {
+      "id": 5,
+      "nombre": "Lentes de Lectura Modernos",
+      "descripcion": "Lentes de lectura modernos con montura metálica y diseño minimalista.",
+      "precio": 30000,
+      "stock": 50,
+      "imagen": "https://acdn.mitiendanube.com/stores/304/917/products/0rx5154__8049_000a1-70f93852345a62843e16128179789095-640-0.jpg",
+      "categoria": 2
+    }
+]
   

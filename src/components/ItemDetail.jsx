@@ -2,35 +2,44 @@ import { toast } from "react-toastify";
 import ItemCount from "./ItemCount";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import Extra from "./Extra";
 
 export const ItemDetail = ({ item }) => {
   const { nombre, imagen, precio, descripcion, stock } = item;
-  const { addToCart, cart } = useContext(CartContext);
+  const { addItem, cart, removeItem } = useContext(CartContext);
 
-  const onAdd = (quantity, item) => {
-    addToCart({ quantity: quantity, item })
-    toast('Elemento agregado al carrito correctamente')
+  const onAdd = (quantity) => {
+    try {
+      addItem(item, quantity);
+      toast('Producto agregado correctamente');
+    } catch (error) {
+      console.error("Error al agregar producto:", error);
+      toast.error('Error al agregar producto');
+    }
+  };
+  const onRemove = (quantity) => {
+    try {
+      removeItem(item.id, quantity);
+      toast('Producto eliminado correctamente');
+    } catch (error) {
+      console.error("Error al eliminar producto:", error);
+      toast.error('Error al eliminar producto');
+    }
   }
-  console.log(cart)
 
-  return (<>
+  return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg mb-4 mx-auto my-20">
       <div className="col-span-1 row-span-3 px-6 py-4">
-        <div className="font-bold text-l mb-2">{nombre}</div>
+        <div className="font-bold text-xl mb-3">{nombre}</div>
         <div>
           <img src={imagen} alt={nombre} className="w-[250px] h-[250px]" />
-
         </div>
-        <p className="text-black-700 text-base">
-          Precio: ${precio.toFixed(2)}
-        </p>
-        <p className="text-black-700 text-base">{stock}</p>
-        <p className="text-black-700 text-base">{descripcion}</p>
-        <ItemCount stock={stock} initial={0} onAdd={onAdd} item={item} />
-        <Extra />
+        {precio && (
+          <p className="text-black-700">Precio: ${precio.toFixed(2)}</p>
+        )}
+        <p className="text-black-700">{stock}</p>
+        <p className="text-black-700">{descripcion}</p>
+        <ItemCount stock={stock} initial={0} item={item} onAdd={onAdd} onRemove={onRemove} />
       </div>
     </div>
-  </>);
-
+  );
 }

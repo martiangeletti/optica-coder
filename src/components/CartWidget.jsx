@@ -1,10 +1,20 @@
-import cart from '../assets/cart.svg'
+import React, { useContext } from 'react'
+import cartImage from '../assets/cart.svg'
+import { Link } from 'react-router-dom'
+import { CartContext } from '../context/CartContext';
 
 const CartWidget = () => {
-    return (<><div className= "text-xl flex">
-        <img src={cart} alt="Cart" />
-        <span className="text-white hover:underline">3</span>
-        </div></>);
-}
+
+    const { cart } = useContext(CartContext)
+
+    const totalProducts = cart.reduce((acc, item,)=> acc + item.quantity, 0)
+
+    return (<div>
+        <img src= {cartImage} alt="cart" className="w-6 h-6"/>
+        {totalProducts}
+    </div>)
+
+ }
+
 
 export default CartWidget;

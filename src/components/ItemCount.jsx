@@ -12,7 +12,7 @@ const ItemCount = ({ stock, initial, onAdd, item }) => {
 
   const handleAdd = () => {
     if (count > 0) {
-      onAdd(count, item);
+      onAdd(count);
     }
   };
 
@@ -38,7 +38,7 @@ const ItemCount = ({ stock, initial, onAdd, item }) => {
       </button>
       <button
         onClick={handleAdd}
-        className="ml-4 bg-teal-500 text-white px-4 py-1 rounded"
+        className="ml-4 bg-pink-500 text-white px-4 py-1 rounded"
       >
         Agregar al carrito
       </button>
