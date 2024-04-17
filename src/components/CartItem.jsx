@@ -15,3 +15,4 @@ const CartItem = ({ producto }) => {
 }
 
 export default CartItem;
+

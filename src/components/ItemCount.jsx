@@ -10,7 +10,7 @@ const ItemCount = ({ stock, initial, onAdd, item }) => {
     }
   };
 
-  const handleAdd = () => {
+  const handleAddToCart = () => {
     if (count > 0) {
       onAdd(count);
     }
@@ -37,7 +37,7 @@ const ItemCount = ({ stock, initial, onAdd, item }) => {
         +
       </button>
       <button
-        onClick={handleAdd}
+        onClick={handleAddToCart}
         className="ml-4 bg-pink-500 text-white px-4 py-1 rounded"
       >
         Agregar al carrito

@@ -4,7 +4,20 @@ import CartItem from '../components/CartItem';
 import { Link } from 'react-router-dom';
 
 const CartPage = () => {
-    const { cart, clearCart, totalPrice, totalQuantity, addItem } = useContext(CartContext);
+    const { cart, clearCart, addItem } = useContext(CartContext);
+
+    const totalQuantity = (productId) => {
+      let total = 0;
+      for (const item of cart) {
+          if (item.item.id === productId) {
+              total += item.quantity;
+          }
+      }
+      return total;
+  };
+
+    const totalPrice = cart.reduce((total, prod) => total + (prod.item.price * prod.quantity), 0);
+
 
     const handleClearCart = () => {
         clearCart();
@@ -17,7 +30,7 @@ const CartPage = () => {
             {cart.length > 0 ? (
                 <>
                     {cart.map((prod) => (
-                        <CartItem key={prod.item.id} producto={prod.item} />
+                        <CartItem key={prod.item.id} producto={prod.item} cantidad={totalQuantity(prod.item.id)} />
                     ))}
                     <h2 className="text-xl font-semibold mt-6">Precio total: ${totalPrice}</h2>
                     <button 

@@ -3,11 +3,12 @@ import ItemCount from "./ItemCount";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
+
 export const ItemDetail = ({ item }) => {
   const { nombre, imagen, precio, descripcion, stock } = item;
-  const { addItem, cart, removeItem } = useContext(CartContext);
+  const { addItem, cartItem, removeItem } = useContext(CartContext);
 
-  const onAdd = (quantity) => {
+  const handleAdd = (quantity) => {
     try {
       addItem(item, quantity);
       toast('Producto agregado correctamente');
@@ -16,7 +17,8 @@ export const ItemDetail = ({ item }) => {
       toast.error('Error al agregar producto');
     }
   };
-  const onRemove = (quantity) => {
+
+  const handleRemove = (quantity) => {
     try {
       removeItem(item.id, quantity);
       toast('Producto eliminado correctamente');
@@ -38,7 +40,7 @@ export const ItemDetail = ({ item }) => {
         )}
         <p className="text-black-700">{stock}</p>
         <p className="text-black-700">{descripcion}</p>
-        <ItemCount stock={stock} initial={0} item={item} onAdd={onAdd} onRemove={onRemove} />
+        <ItemCount stock={stock} initial={0} item={item} onAdd={handleAdd} onRemove={handleRemove} />
       </div>
     </div>
   );
